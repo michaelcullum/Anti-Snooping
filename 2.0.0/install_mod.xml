@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.-->
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD.\nAlthough MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD.\nNo support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
+	<header>
+		<meta name="generator" content="MODX file generated with PP MODX Creator by tumba25 (offline version)"/>
+		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
+		<title lang="en"><![CDATA[Anti-Snooping]]></title>
+		<description lang="en"><![CDATA[When someone visits the URL of a forum they aren't authorised to access it says 'You are not authorised to read this forum', which can cause them to try find out what the forum is. Instead this mod makes it display 'The forum you selected does not exist'.]]></description>
+		<author-group>
+			<author>
+				<realname><![CDATA[Michael Cullum]]></realname>
+				<username><![CDATA[Unknown Bliss]]></username>
+				<homepage><![CDATA[http://unknownbliss.co.uk]]></homepage>
+				<email><![CDATA[unknownbliss@phpbb.ce.ms]]></email>
+			</author>
+		</author-group>
+		<mod-version>2.0.0</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>60</time>
+			<target-version>3.0.7-PL1</target-version>
+		</installation>
+		<history>
+			<entry>
+				<date>2010-09-19</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[MOD Created with forum message]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2010-09-20</date>
+				<rev-version>2.0.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Added Extra messages than just forum message]]></change>
+				</changelog>
+			</entry>
+		</history>
+	</header>
+	<action-group>
+		<open src="language/en/common.php">
+			<edit>
+				<find><![CDATA[	'SORRY_AUTH_READ'			=> 'You are not authorised to read this forum.',]]></find>
+				<action type="replace-with"><![CDATA[	'SORRY_AUTH_READ'			=> 'The forum you selected does not exist.',]]></action>
+			</edit>
+		</open>
+	</action-group>
+</mod>
